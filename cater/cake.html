@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besty Bar - Cakes</title>
+    <link rel="stylesheet" href="delicacies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html">Besty<span>Bar</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="delicacies.html">Delicacies</a></li>
+            <li><a href="snacks.html">Snacks</a></li>
+            <li><a href="cakes.html" class="active">Cakes</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Delicious Cakes</h1>
+        <p></p>
+    </section>
+
+    <section class="menu-container">
+        <div class="menu-grid">
+            <!-- List of 15+ Cakes -->
+            <script>
+                const cakes = [
+                    {name: "Chocolate Cake", price: 30000, img: "clc.jpeg"},
+                    {name: "Vanilla Cake", price: 30000, img: "val.jpeg"},
+                    {name: "Red Velvet Cake", price: 25000, img: "vel.jpeg"},
+                    {name: "Carrot Cake", price: 30000, img: "carrot.jpeg"},
+                    {name: "Lemon Cake", price: 25000, img: "lmn.jpeg"},
+                    {name: "Coffee Cake", price: 30000, img: "cfe.jpeg"},
+                    {name: "Strawberry Cake", price: 30000, img: "stw.jpeg"},
+                    {name: "Coconut Cake", price: 32000, img: "coct.jpeg"},
+                    {name: "Peach Cake", price: 35000, img: "pch.jpeg"},
+                    {name: "Chiffon Cake", price: 35000, img: "chv.jpeg"},
+                    {name: "Butter Cake", price: 32000, img: "btt.jpeg"},
+                    {name: "Banana Cake", price: 31000, img: "backe.jpeg"},
+                    
+                ];
+
+                document.write(cakes.map(cake => `
+                    <div class="menu-item">
+                        <img src="${cake.img}" alt="${cake.name}">
+                        <div class="item-info">
+                            <h3>${cake.name}</h3>
+                            <p class="price">₦${cake.price}</p>
+                            <button onclick="sendWhatsApp('Food inquiry: ${cake.name}')">
+                                <i class="fab fa-whatsapp"></i> Order Now
+                            </button>
+                        </div>
+                    </div>
+                `).join(''));
+            </script>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Besty Bar. All rights reserved.</p>
+        <a href="index.html" class="home-link">Back to Home</a>
+    </footer>
+
+    <script>
+        function sendWhatsApp(message) {
+            window.location.href = `https://wa.me/2348037117424?text=${encodeURIComponent(message)}`;
+        }
+    </script>
+</body>
+</html>

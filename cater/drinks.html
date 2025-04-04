@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besty Bar Drinks</title>
+    <link rel="stylesheet" href="delicacies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html">Besty<span>Bar</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="delicacies.html">Delicacies</a></li>
+            <li><a href="snacks.html">Snacks</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+            <li><a href="drinks.html" class="active">Drinks</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1 >Drinks</h1>
+    </section>
+<p><marquee>we also deal with wholesale, prices here are not stable and are liable to changes</marquee></p>
+    <section class="menu-container">
+        <div class="menu-grid">
+            <!-- List of Nigerian Drinks -->
+            <script>
+                const drinks = [
+                    {name: "Zobo", price: 500, wholesalePrice: 450, img: "zb.jpeg"},
+                    {name: "Chapman, Smoove and Lacasera", price: 1000, wholesalePrice: 800, img: "ch.jpeg"},
+                    {name: "Malt", price: 1000, wholesalePrice: 900, img: "malt.jpeg"},
+                    {name: "Fanta", price: 1000, wholesalePrice: 850, img: "ft.jpeg"},
+                    {name: "Coke", price: 1000, wholesalePrice: 850, img: "coke.jpeg"},
+                    {name: "Nutri Milk", price: 1000, wholesalePrice: 850, img: "nm.jpeg"},
+                    {name: "Tiger Nut Drink", price: 1000, wholesalePrice: 950, img: "tn.jpeg"},
+                    {name: "Ginger Drink", price: 800, wholesalePrice: 550, img: "ginger.jpeg"},
+                    {name: "Lemonade", price: 800, wholesalePrice: 550, img: "ln.jpeg"},
+                    {name: "Soda", price: 1000, wholesalePrice: 850, img: "sd.jpeg"},
+                    // Alcohol drinks with Sprite forgot to add it up with others
+                    {name: "Beer", price: 2000, wholesalePrice: 1450, img: "beer.jpeg"},
+                    {name: "Vodka", price: 5000, wholesalePrice:'' ,img: "vk.jpeg"},
+                    {name: "Whiskey", price: 7500, wholesalePrice: '', img: "wy.jpeg"},
+                    {name: "Rum", price: 7000, wholesalePrice: '', img: "rum.jpeg"},
+                    {name: "Tequila", price: 10000, wholesalePrice: '', img: "tq.jpeg"},
+                    {name: "Sprite", price: 1000, wholesalePrice: 850, img: "spt.jpeg"}
+                ];
+
+                document.write(drinks.map(drink => `
+                    <div class="menu-item">
+                        <img src="${drink.img}" alt="${drink.name}">
+                        <div class="item-info">
+                            <h3>${drink.name}</h3>
+                            <p class="price">₦${drink.price} | Wholesale: ₦${drink.wholesalePrice}</p>
+                            <button onclick="sendWhatsApp('Food inquiry: ${drink.name}')">
+                                <i class="fab fa-whatsapp"></i> Order Now
+                            </button>
+                        </div>
+                    </div>
+                `).join(''));
+            </script>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Besty Bar. All rights reserved.</p>
+        <a href="index.html" class="home-link">Back to Home</a>
+    </footer>
+
+    <script>
+        function sendWhatsApp(message) {
+            window.location.href = `https://wa.me/+2348037117424?text=${encodeURIComponent(message)}`;
+        }
+    </script>
+</body>
+</html>

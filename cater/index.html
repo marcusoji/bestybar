@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besty Bar and Catering</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Besty Bar<span> and Catering</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="delicacies.html">Food</a></li>
+            <li><a href="snacks.html">Snacks</a></li>
+            <li><a href="cake.html">Cakes</a></li>            
+            <li><a href="drinks.html">Drinks</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Besty Bar and Catering</h1>
+            <p>Delicious food for your special events</p>
+            <a href="#food" class="btn">View Menus</a>
+        </div>
+    </section>
+
+    <!-- Food Menu -->
+    <section id="food" class="menu-section">
+        <h2>Our <span>Food</span> Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="rice.jpeg" alt="Main Course">
+                <div class="menu-content">
+                    <h3>Main Courses</h3>
+                    <ul>
+                        <li>Rice(Party Standard) </li>
+                        <li> Beans</li>
+                        <li>Yam delight</li>
+                       <li>Egusi soup</li>
+                       <li>Oha soup</li>
+                       <li>Vegetable soup</li>                      
+                       <li> <a href="delicacies.html"> Other delicacies</a></li>
+                    </ul>
+                    <button onclick="sendWhatsApp('Food inquiry: Main Courses')">
+                        <i class="fab fa-whatsapp"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            <!-- Add more food items -->
+        </div>
+    </section>
+
+    <!-- Snacks Menu -->
+    <section id="snacks" class="menu-section">
+        <h2>Our <span>Snacks</span></h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="scotch egg.jpeg" alt="Snacks">
+                <div class="menu-content">
+                    <h3>Party Snacks</h3>
+                    <ul>
+                        <li>Small chops</li>
+                        <li>Meat Pie</li>
+                        <li>Scotch egg</li>
+                        <li>Chin-Chin</li>
+                        <li><a href="snacks.html">Others</a></li>
+                    </ul>
+                    <button onclick="sendWhatsApp('Snacks inquiry: Party Snacks')">
+                        <i class="fab fa-whatsapp"></i> Order now
+                    </button>
+                </div>
+            </div>
+            <!-- Add more snack items -->
+        </div>
+    </section>
+
+    <!-- Cakes Menu -->
+    <section id="cakes" class="menu-section">
+        <h2>Our <span>Cakes</span></h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Cakes">
+                <div class="menu-content">
+                    <h3>Custom Cakes</h3>
+                    <ul>
+                        <li>Chocolate Decadence </li>
+                        <li>Red Velvet</li>
+                        <li>Vanilla Bean</li>
+                        <a href="cake.html">More</a>
+                    </ul>
+                    <button onclick="sendWhatsApp('Cake inquiry: Custom Cakes')">
+                        <i class="fab fa-whatsapp"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            <!-- Add more cake items -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact <span>Besty Bar</span></h2>
+                <p><i class="fas fa-phone"></i> <a href="tel:+2348037117424">+234 803 711 7424</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:bestnkoji@gmail.com">bestnkoji@gmail.com</a></p>
+                <div class="social-links">
+                    <a href="https://wa.me/2348037117424" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100069572176450" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="I'm on Instagram as @marcusoji. Install the app to follow my photos and videos. https://www.instagram.com/marcusoji?igsh=YzljYTk1ODg3Zg==" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <form id="catering-form">
+                <h3>Send Inquiry</h3>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone Number">
+                <select required>
+                    <option value="">Interested In...</option>
+                    <option>Food Menu</option>
+                    <option>Snacks</option>
+                    <option>Cakes</option>
+                    <option>Full Catering Service</option>
+                </select>
+                <textarea placeholder="Your Message..." required></textarea>
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/+2348037117424" class="float-whatsapp" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

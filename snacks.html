@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besty Bar  Snacks</title>
+    <link rel="stylesheet" href="snacks.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html">Besty<span>Bar</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="delicacies.html">Delicacies</a></li>
+            <li><a href="snacks.html" class="active">Snacks</a></li>
+            <li><a href="cakes.html">Cakes</a></li>
+        </ul>
+    </nav><section class="hero">
+    <h1>Snacks</h1>
+    <p><marquee>entices your taste buds</marquee></p>
+</section>
+
+<section class="menu-container">
+    <div class="menu-grid">
+        
+        <!-- List of 15+ Snacks -->
+        <script>
+            const snacks = [
+                {name: "Puff Puff", price: 500, img: "puff.jpeg"},
+                {name: "Meat Pie", price: 1200, img: "mt.jpeg"},
+                {name: "Chin Chin", price: 1000, img: "chin.jpeg"},
+                {name: "Scotch Egg", price: 1500, img: "sg.jpeg"},
+                {name: "Fish Roll", price: 1000, img: "fir.jpeg"},
+                {name: "Buns", price: 500, img: "buns.jpeg"},
+                {name: "Egg Roll", price: 900, img: "eggr.jpeg"},
+                {name: "Coconut Chips", price: 600, img: "ccn.jpeg"},
+                {name: "Burger", price: 2500, img: "bgk.jpeg"},
+                {name: "Shawarma Wrap", price: 3500, img: "shw.jpeg"},
+                {name: "Tasty fiesta", price: 5000, img: "tf.jpeg"},
+                {name: "Potato Chips", price: 800, img: "pc.jpeg"},
+                {name: "Fish Pie", price: 800, img: "fp.jpeg"},
+                {name: "Meat kebab", price: 1500, img: "mkb.jpeg"},
+                {name: "Plantain Chips", price: 800, img: "plc.jpeg"}
+            ];
+
+            document.write(snacks.map(snack => `
+                <div class="menu-item">
+                    <img src="${snack.img}" alt="${snack.name}">
+                    <div class="item-info">
+                        <h3>${snack.name}</h3>
+                        <p class="price">₦${snack.price}</p>
+                        <button onclick="sendWhatsApp('Food inquiry: ${snack.name}')">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </button>
+                    </div>
+                </div>
+            `).join(''));
+        </script>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2023 Besty Bar. All rights reserved.</p>
+    <a href="index.html" class="home-link">Back to Home</a>
+</footer>
+
+<script>
+    function sendWhatsApp(message) {
+        window.location.href = `https://wa.me/2348037117424?text=${encodeURIComponent(message)}`;
+    }
+</script>
+
+</body>
+</html>
